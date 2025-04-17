@@ -1,8 +1,7 @@
 #!/bin/sh
 
 # Add iptables setup using sudo and tee to handle redirection (append mode)
-echo " \
--A INPUT -p tcp -m state --state NEW -m tcp --dport 6443 -j ACCEPT\n\
+echo "-A INPUT -p tcp -m state --state NEW -m tcp --dport 6443 -j ACCEPT\n\
 -A INPUT -p tcp -m state --state NEW --match multiport --dport 2379,2380 -j ACCEPT\n\
 -A INPUT -p tcp -m state --state NEW --match multiport --dport 10250,10256,10257,10259 -j ACCEPT\n\
 -A INPUT -p tcp -m state --state NEW -m tcp --dport 30000:32767 -j ACCEPT\n\
