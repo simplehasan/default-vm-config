@@ -1,6 +1,6 @@
 # ==================== Docker installation ==================== #
 # 1 Update
-sudo apt.update
+sudo apt update
 
 # 2 Install prequisites
 sudo apt install -y apt-transport-https ca-certificates curl gnupg software-properties-common lsb-release
