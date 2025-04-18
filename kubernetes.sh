@@ -1,8 +1,8 @@
 #!/bin/bash
-# 1 Install cri-dockerd
-cd ~
-wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.16/cri-dockerd_0.3.16.3-0.ubuntu-jammy_amd64.deb
-sudo dpkg -i cri-dockerd_0.3.16.3-0.ubuntu-jammy_amd64.deb
+# # 1 Install cri-dockerd
+# cd ~
+# wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.16/cri-dockerd_0.3.16.3-0.ubuntu-jammy_amd64.deb
+# sudo dpkg -i cri-dockerd_0.3.16.3-0.ubuntu-jammy_amd64.deb
 
 # 2 install apt-transport-https and ca-cert
 sudo apt update && apt install -y apt-transport-https ca-certificates curl
