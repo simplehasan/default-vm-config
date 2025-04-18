@@ -1,3 +1,4 @@
+#!/bin/bash
 # ==================== Docker installation ==================== #
 # 1 Update
 sudo apt update
@@ -17,5 +18,11 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 sudo apt update
 
 # 6 Finally, install Docker:
-sudo apt install -y docker-ce docker-ce-cli docker-buildx-plugin docker-compose-plugin
+sudo apt update && sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo usermod -aG docker ${USER}
+
+# 7 Install cri-dockerd
+cd ~
+wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.16/cri-dockerd_0.3.16.3-0.ubuntu-jammy_amd64.deb
+sudo dpkg -i cri-dockerd_0.3.16.3-0.ubuntu-jammy_amd64.deb
+
