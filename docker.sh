@@ -16,6 +16,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 
 # 5 Next, update the package database with the Docker packages:
 sudo apt update
+sudo apt upgrade
 
 # 6 Finally, install Docker:
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
